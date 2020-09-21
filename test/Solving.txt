@@ -1,0 +1,106 @@
+//*****************************************************************************
+//
+// ABEC3 Solving Script
+// Project: Coupled Chambers
+//
+//*****************************************************************************
+
+File="Nodes.txt"
+
+
+Control_Solver
+  Dim=3D;
+  f1=10;  f2=500;  Abscissa=log;   NumFrequencies=50
+  MeshFrequency=1000Hz
+
+SubDomain_Properties "Chamber1"
+  SubDomain=1
+
+SubDomain_Properties "Chamber2"
+  SubDomain=2
+  
+SubDomain_Properties "Chamber3"
+  SubDomain=3
+  
+
+Elements "Chamber1"
+  Shift= 0.2, -0.7, 0
+  RefNodes="Chambers"
+  SubDomain=1
+  100   1000 1001 1002 1003  // Top
+  101   2000 2001 2002 2003  // Bottom
+  102   2000 2003 1001 1000  // Left
+  103   2000 1000 1003 2001  // Front
+  104   1001 2003 2002 1002  // Rear
+  1051  2004 2005 2006 2007  // Right below
+  1052  2008 2009 2010 2011  // Right above
+  1053  2002 2007 2010 1002  // Right rear
+  1054  1003 2009 2004 2001  // Right front
+
+Elements "Interface12"
+  Shift= 0.2, -0.7, 0
+  RefNodes="Chambers"
+  EdgeLength=10cm
+  SubDomain=1,2
+  100   2005 2008 2011 2006
+
+Elements "Chamber2"
+  Shift=-0.4, 0, 0
+  RefNodes="Chambers"
+  SubDomain=2
+  100  5000 5003 6001 6000 // Front
+  102  6000 6001 6002 6003 // Top
+  103  5001 6003 6002 5002 // Rear
+  104  5000 5001 5002 5003 // Bottom
+
+Elements "Interface32"
+  Mirror=xy
+  Shift= -1.2, 0.7, 0
+  RefNodes="Chambers"
+  EdgeLength=10cm
+  SubDomain=3,2
+  100   2005 2008 2011 2006
+
+Elements "Chamber3"
+  Mirror=xy
+  Shift= -1.2, 0.7, 0
+  RefNodes="Chambers"
+  SubDomain=3
+  100   1000 1001 1002 1003  // Top
+  101   2000 2001 2002 2003  // Bottom
+  102   2000 2003 1001 1000  // Left
+  103   2000 1000 1003 2001  // Front
+  104   1001 2003 2002 1002  // Rear
+  1051  2004 2005 2006 2007  // Right below
+  1052  2008 2009 2010 2011  // Right above
+  1053  2002 2007 2010 1002  // Right rear
+  1054  1003 2009 2004 2001  // Right front
+
+
+
+off WallImpedance "Damping of Chamber 1"
+  RefElements="Chamber1"
+  ImpType=Reflection
+  Value=0.5
+
+
+Pressure_Points  "PressurePoint1"
+  RefNodes="PressurePoints"
+  SubDomain=1
+  DrvGroup=1001
+//Name  Node
+  100   1000  
+
+Pressure_Points  "PressurePoint2"
+  RefNodes="PressurePoints"
+  SubDomain=1
+  DrvGroup=1002
+//Name  Node
+  100   1001  
+
+Pressure_Points  "PressurePoint3"
+  RefNodes="PressurePoints"
+  SubDomain=3
+  DrvGroup=1003
+//Name  Node
+  100   1002  

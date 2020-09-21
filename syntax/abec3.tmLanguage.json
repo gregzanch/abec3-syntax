@@ -1,0 +1,145 @@
+{
+	"$schema": "./_schema.json",
+	"name": "abec3",
+  "scopeName": "source.abec3",
+	"patterns": [{
+		"include": "#main"
+	}],
+	"uuid": "e45fe9a2-a206-4b85-830a-970a1537757e",
+	"repository": {
+		"main": {
+			"patterns": [{
+					"match": "(\\bControl_Solver\\b|\\bControl_Field\\b|\\bControl_Spectrum\\b|\\bBaffle\\b|\\bBE_Spectrum\\b|\\bDiaphragm\\b|\\bDuct\\b|\\bDriving\\b|\\bDriving_Values\\b|\\bElements\\b|\\bField\\b|\\bFormula\\b|\\bInfinite_Baffle\\b|\\bLE_Spectrum\\b|\\bMeshFile_Properties\\b|\\bNodes\\b|\\bOff\\b|\\bPressure_Points\\b|\\bPressure_Box\\b|\\bRadiation_Impedance\\b|\\bShell\\b|\\bSubdomain_Properties\\b|\\bTransition\\b|\\bVibFile\\b|\\bWallImpedance\\b)",
+					"name": "keyword.control.abecs"
+				},
+				{
+					"match": "(\\bAbscissa\\b|\\bAngularRes\\b|\\bAnalysisType\\b|\\bAltitude\\b|\\bAxialRot\\b|\\bAlpha\\b|\\bAlias\\b|\\bBodeType\\b|\\bBasePlane\\b|\\bBreathing\\b|\\bCloneOf\\b|\\bColor\\b|\\bc\\b|\\bCabDim\\b|\\bCabPos\\b|\\bCardioLevel\\b|\\bDataFileAlias\\b|\\bDataFileAlias_Horiz\\b|\\bDataFileAlias_Vert\\b|\\bd\\b|\\bdD\\b|\\bdD1\\b|\\bDelay\\b|\\bDim\\b|\\bDirection\\b|\\bDirIsAxial\\b|\\bDistance\\b|\\bdM\\b|\\bDrvColor\\b|\\bDrvGroup\\b|\\bDrvGroups\\b|\\bDrvType\\b|\\bDrvWeight\\b|\\bDuctType\\b|\\bdVC\\b|\\bEdgeLength\\b|\\bElType\\b|\\bExclude\\b|\\bElName\\b|\\bf1\\b|\\bf2\\b|\\bFrequencies\\b|\\bFile\\b|\\bft\\b|\\bFarfield\\b|\\bGraphHeader\\b|\\bH\\b|\\bHD\\b|\\bhD1\\b|\\bhD2\\b|\\bhM\\b|\\bhVC\\b|\\bHasPole\\b|\\bHasBaffle\\b|\\bHeight\\b|\\bID\\b|\\bIBOffset\\b|\\bIBPlane\\b|\\bImpType\\b|\\bImpedanceNumFrequencies\\b|\\bIsRms\\b|\\bIsProtoType\\b|\\bInclination\\b|\\bInclude\\b|\\bLineLength\\b|\\bLineDir\\b|\\bLineAngle\\b|\\bLineNumPoints\\b|\\bLen\\b|\\bMirror\\b|\\bMeshFrequency\\b|\\bMeshing\\b|\\bMeshFileAlias\\b|\\bMinAngle\\b|\\bMinArea\\b|\\bMeshMode\\b|\\bMeshMinDistance\\b|\\bName\\b|\\bNoBaffle\\b|\\bNoDriving\\b|\\bNormType\\b|\\bNormals\\b|\\bNormalized\\b|\\bNormalizingAngle\\b|\\bNumFrequencies\\b|\\bNumBaffles\\b|\\bNumRings\\b|\\bN\\b|\\bNUC\\b|\\bOffset\\b|\\bPart\\b|\\bPosition\\b|\\bPlotType\\b|\\bPolarRange\\b|\\bphi\\b|\\bRange\\b|\\bRange_max\\b|\\bRange_min\\b|\\bRefDiaphragm\\b|\\bRef\\b|\\bRefEdges\\b|\\bRefEdge\\b|\\bRefEdge1\\b|\\bRefEdge2\\b|\\bRefElement\\b|\\bRefElement1\\b|\\bRefElement2\\b|\\bRefElements\\b|\\bRefElement\\b|\\bRefElements_Flow\\b|\\bRefElements_Pressure\\b|\\bRefNodes\\b|\\bRefShell\\b|\\bRot\\b|\\bRotate\\b|\\bRotateX\\b|\\bRotateY\\b|\\bRotateZ\\b|\\bRadImpType\\b|\\brho\\b|\\bRectType\\b|\\bScale\\b|\\bSD\\b|\\bSD1\\b|\\bSet\\b|\\bShellType\\b|\\bShift\\b|\\bSide\\b|\\bSimple\\b|\\bSourcePos\\b|\\bSpectrumType\\b|\\bStepSize\\b|\\bSubDomain\\b|\\bSwapNormals\\b|\\bSym\\b|\\bStaticPressure\\b|\\bSystem\\b|\\bTags\\b|\\btD1\\b|\\bTemperature\\b|\\btheta\\b|\\bt1\\b|\\btb\\b|\\bValue\\b|\\bVertices\\b|\\bVibFileAlias\\b|\\bW\\b|\\bWD\\b|\\bWs\\b|\\bWs1\\b|\\bWeight\\b|\\bWidth\\b|\\bxl\\b|\\bxc\\b|\\bxr\\b|\\byb\\b|\\byc\\b|\\byt\\b)",
+					"name": "support.constant.abecs"
+				},
+				{
+					"match": "(\\b2D\\b|\\b3D\\b|\\bAcceleration\\b|\\bAcoustical\\b|\\bAdmittance\\b|\\bAmpl\\b|\\bAll\\b|\\bBifu\\b|\\bBottom\\b|\\bBottomLeft\\b|\\bBottomLeftRear\\b|\\bBottomRear\\b|\\bBottomRight\\b|\\bBottomRightRear\\b|\\bBalloon\\b|\\bCenter\\b|\\bCircSym\\b|\\bColor\\b|\\bCone\\b|\\bContour\\b|\\bContourFillOutline\\b|\\bContourOutline\\b|\\bCurves\\b|\\bComplex\\b|\\bDamping\\b|\\bDirectivity\\b|\\bDisc\\b|\\bDisk\\b|\\bDome\\b|\\bDelaunay\\b|\\bEllipse\\b|\\bExcursion\\b|\\bExterior\\b|\\bElements\\b|\\bfalse\\b|\\bFront\\b|\\bFull\\b|\\bFullRear\\b|\\bHorizontal\\b|\\bImag\\b|\\bImpedance\\b|\\bIntensity\\b|\\bInterface\\b|\\bInterior\\b|\\bLeft\\b|\\bLeftRear\\b|\\bLeveldB\\b|\\blin\\b|\\blog\\b|\\bMechanical\\b|\\bMesh\\b|\\bNeg\\b|\\bNone\\b|\\bNormalized\\b|\\bOval\\b|\\bPhase\\b|\\bPos\\b|\\bPressure\\b|\\bPlanes\\b|\\bReal\\b|\\bRear\\b|\\bRectangle\\b|\\bReflection\\b|\\bRight\\b|\\bRightRear\\b|\\bRing\\b|\\bSpecific\\b|\\bSpectrum\\b|\\bSphere\\b|\\btrue\\b|\\bTop\\b|\\bTopLeft\\b|\\bTopLeftRear\\b|\\bTopRear\\b|\\bTopRight\\b|\\bTopRightRear\\b|\\bVelocity\\b|\\bVertical\\b|\\bx\\b|\\bxy\\b|\\bxz\\b|\\bxyz\\b|\\by\\b|\\byx\\b|\\byz\\b|\\bz\\b|\\bzx\\b|\\bzy\\b)",
+					"name": "entity.name.type.abecs"
+				},
+				{
+					"match": "(=)",
+					"name": "keyword.operator.abecs"
+				},
+				{
+					"match": "(Hz|kHz|mm|cm)",
+					"name": "support.type.abecs"
+				},
+				{
+					"match": "(\\b[a-z][a-z0-9]*)",
+					"name": "keyword.control.abecs"
+				},
+				{
+					"include": "#numeric"
+				},
+				{
+					"begin": "(\\{)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.abecs"
+						}
+					},
+					"patterns": [{
+						"include": "#main__1"
+					}],
+					"end": "(\\})",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.abecs"
+						}
+					}
+				},
+				{
+					"match": "(;)",
+					"name": "punctuation.abecs"
+				},
+				{
+					"begin": "(\")",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.abecs"
+						}
+					},
+					"contentName": "text.abecs",
+					"end": "(\")",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.abecs"
+						}
+					}
+				},
+				{
+					"begin": "(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.abecs"
+						}
+					},
+					"patterns": [{
+						"include": "#main__3"
+					}],
+					"end": "(\\))",
+					"endCaptures": {
+						"1": {
+							"name": "punctuation.abecs"
+						}
+					}
+				},
+				{
+					"include": "#multi_line_comment"
+				},
+				{
+					"match": "(//.*)",
+					"name": "comment.abecs"
+				}
+			]
+		},
+		"main__1": {
+			"patterns": [{
+				"include": "#main"
+			}]
+		},
+		"main__2": {
+			"patterns": []
+		},
+		"main__3": {
+			"patterns": [{
+					"include": "#numeric"
+				},
+				{
+					"match": "(,)",
+					"name": "punctuation.abecs"
+				}
+			]
+		},
+		"multi_line_comment": {
+			"patterns": [{
+				"begin": "(/\\*)",
+				"beginCaptures": {
+					"1": {
+						"name": "comment.abecs"
+					}
+				},
+				"contentName": "comment.abecs",
+				"end": "(\\*/)",
+				"endCaptures": {
+					"1": {
+						"name": "comment.abecs"
+					}
+				}
+			}]
+		},
+		"multi_line_comment__1": {
+			"patterns": []
+		},
+		"numeric": {
+			"patterns": [{
+				"match": "(\\b\\d+)",
+				"name": "constant.numeric.abecs"
+			}]
+		}
+	}
+}

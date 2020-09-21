@@ -1,0 +1,41 @@
+{
+    "name": "abec3-syntax",
+    "displayName": "abec3-syntax",
+    "description": "Syntax highlighting for ABEC3 scripts",
+    "version": "0.0.1",
+    "publisher": "gregzanch",
+    "icon": "res/abec3-icon.jpg",
+    "author": {
+      "name": "gregzanch",
+      "url": "http://gregzan.ch"
+    },
+    "engines": {
+        "vscode": "^1.37.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/gregzanch/abec3-syntax",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/gregzanch/abec3-syntax.git"
+    },
+    "galleryBanner": {
+      "color": "#FAFBFC",
+      "theme": "light"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "abec3",
+            "aliases": ["abec", "abec3", "abecs"],
+            "extensions": [".abecs",".abec3s",".abecscript",".txt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "abec3",
+            "scopeName": "source.abec3",
+            "path": "./syntax/abec3.tmLanguage.json"
+        }]
+    }
+}
