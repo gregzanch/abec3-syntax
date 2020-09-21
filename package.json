@@ -3,10 +3,10 @@
     "displayName": "abec3-syntax",
     "description": "Syntax highlighting for ABEC3 scripts",
     "version": "0.0.1",
-    "publisher": "gregzanch",
+    "publisher": "gregzanchelli",
     "icon": "res/abec3-icon.jpg",
     "author": {
-      "name": "gregzanch",
+      "name": "Greg Zanchelli",
       "url": "http://gregzan.ch"
     },
     "engines": {
