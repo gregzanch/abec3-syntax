@@ -22,24 +22,26 @@ WallImpedance Waveguide
 *Identifiers
 *****************************************
 Abscissa AngularRes AnalysisType Altitude AxialRot Alpha Alias
-BodeType BasePlane Breathing Bl
+BodeType BasePlane Breathing Bl BL BL1 BL2 
 CloneOf Color c CabDim CabPos CardioLevel Cms
-DataFileAlias DataFileAlias_Horiz DataFileAlias_Vert d dD dD1 Def Delay Dim Direction DirIsAxial Distance dM DrvColor DrvGroup DrvGroups DrvType DrvWeight DuctType dVC
-EdgeLength ElType Exclude ElName eta ExpoLe
-f0 f1 f2 Frequencies File ft Farfield
+DataFileAlias DataFileAlias_Horiz DataFileAlias_Vert d dD dD1 dTh dMo Def Delay Dim Direction DirIsAxial Distance dM DrvColor DrvGroup DrvGroups DrvType DrvWeight DuctType dVC
+EdgeLength ElType Exclude ElName eta ExpoLe ExpoLe1 ExpoLe2 ExpoRe ExpoRe1 ExpoRe2
+f0 f1 f2 Frequencies File ft Farfield fs fre fre1 fre2
 GraphHeader
-H HD hD1 hD2 hM hVC HasPole HasBaffle Height
+H HD hD1 hD2 hM hVC HasPole HasBaffle Height HMo HTh
 ID IBOffset IBPlane ImpType ImpedanceNumFrequencies IsRms IsProtoType Inclination Include
-Len Le LineLength LineDir LineAngle LineNumPoints
+Kms
+Len Le Le1 Le2 Le21 Le22 LineLength LineDir LineAngle LineNumPoints Lambda
 Mirror MeshFrequency Meshing MeshFileAlias MinAngle MinArea MeshMode MeshMinDistance Mms
 Name NoBaffle NoDriving NormType Normals Normalized NormalizingAngle NumFrequencies NumBaffles NumRings N NUC
 Offset Order
 Part Position PlotType PolarRange phi 
-Range Range_max Range_min RefDiaphragm Ref= RefEdges= RefEdge= RefEdge1= RefEdge2= RefElement= RefElement1= RefElement2= RefElements RefElement RefElements_Flow RefElements_Pressure RefNodes RefShell Rot Rotate RotateX RotateY RotateZ RadImpType rho RectType Re Rms
+Qms Qes Qes1 Qes2
+Range Range_max Range_min RefDiaphragm Ref= RefEdges= RefEdge= RefEdge1= RefEdge2= RefElement= RefElement1= RefElement2= RefElements RefElement RefElements_Flow RefElements_Pressure RefNodes RefShell Rot Rotate RotateX RotateY RotateZ RadImpType rho RectType Re Re1 Re2 Re21 Re22 Rms
 Scale SD SD1 Set ShellType Shift Side Simple SourcePos SpectrumType StepSize SubDomain SwapNormals Sym StaticPressure System SMo Sth
 Tags tD1 Temperature theta t1 tb T t0 
-Value Vertices VibFileAlias V0 Visc
-W WD Ws Ws1 Weight Width
+Value Vertices VibFileAlias V0 Visc Vf
+W WD Ws Ws1 Weight Width WMo WTh
 xl xc xr
 yb yc yt
 z0
